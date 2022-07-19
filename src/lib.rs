@@ -188,7 +188,9 @@ impl Build {
             // This actually fails to compile on musl (it needs linux/version.h
             // right now) but we don't actually need this most of the time.
             // API of engine.c ld fail in Windows.
-            configure.arg("no-engine");
+
+            // TODO add the headers
+            // configure.arg("no-engine");
         }
 
         if target.contains("musl") {
